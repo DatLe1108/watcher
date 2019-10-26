@@ -1,7 +1,12 @@
 import React from 'react';
+import Login from './login/Login';
 
-const App = () => {
-    return (<div>Watcher</div>);
+class App extends React.Component {
+
+    render() { 
+        return (<Login />);
+    }
+
 };
 
 export default App;
