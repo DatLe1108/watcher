@@ -18,7 +18,7 @@ class Login extends React.Component {
        });
     }
 
-    onAuthChange =(isSignedIn) => {
+    onAuthChange = (isSignedIn) => {
         
         if (isSignedIn) {
             this.props.logIn(this.auth.currentUser.get().getId());
@@ -27,8 +27,39 @@ class Login extends React.Component {
         }
     }
 
+    onSignOutButtonClick = () => {
+        this.auth.signOut();
+    }
+
+    onSignInButtonClick = () => {
+        this.auth.signIn();
+    }
+
+    renderLoginButton() {
+
+        if (this.props.isSignedIn === null) {
+            return null;
+        } else if (this.props.isSignedIn) {
+            return (
+                <button className="ui red google button" onClick={this.onSignOutButtonClick}>
+                    Sign out
+                </button>
+            );
+        }
+
+        return (
+            <button className="ui red google button" onClick={this.onSignInButtonClick}>
+                Sign in with Google
+            </button>
+        );
+    }
+
     render() {
-        return (<div>Login</div>);
+        return (
+            <React.Fragment>
+                {this.renderLoginButton()}
+            </React.Fragment>
+        );
     }
 
 }

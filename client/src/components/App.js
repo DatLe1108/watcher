@@ -1,10 +1,14 @@
 import React from 'react';
-import Login from './login/Login';
+import Header from './Header';
 
 class App extends React.Component {
 
     render() { 
-        return (<Login />);
+        return (
+            <div className="ui container">
+                <Header />
+            </div>
+            );
     }
 
 };
