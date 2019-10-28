@@ -6,11 +6,7 @@ const streamsReducer = (state = INIT_STATE, action) => {
 
     if (action.type === CREATE_STREAM) {
         let createdStream = action.payload;
-        let streams = state.streams;
-        console.log("test");
-        console.log(state);
-        streams[createdStream.id] = createdStream;
-        return { ...state, streams };
+        return { ...state, [createdStream.id]: createdStream };
     }
 
     return state;
