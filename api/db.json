@@ -1,0 +1,10 @@
+{
+    "streams": [
+        {
+            "id": 1,
+            "name": "First stream",
+            "description": "My description",
+            "author": 123456
+        }
+    ]
+}
