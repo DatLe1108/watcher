@@ -1,7 +1,9 @@
 import { combineReducers} from 'redux';
 
 import authReducer from './authReducer';
+import streamsReducer from './streamsReducer';
 
 export default combineReducers({
-    authReducer
-});
+    authReducer,
+    streams: streamsReducer
+})
