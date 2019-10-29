@@ -4,7 +4,8 @@ import { LOG_IN,
         EDIT_STREAM,
         DELETE_STREAM,
         SHOW_STREAM,
-        STREAM_LIST } from './type';
+        STREAM_LIST,
+        STREAM_SINGLE } from './type';
 import streamsApi from '../api/streamApi';
 import history from '../history';
 
@@ -37,6 +38,15 @@ export const fetchStreams = () => async (dispatch) => {
     });
 };
 
+export const fetchStream = (streamId) => async (dispatch) =>  {
+    let response = await streamsApi.get(`/streams/${streamId}`);
+
+    dispatch({
+        type: STREAM_SINGLE,
+        payload: response.data
+    });
+};
+
 export const createStream = (stream) => async (dispatch) => {
     let createdStream = await streamsApi.post('/streams', stream);
 
@@ -48,11 +58,15 @@ export const createStream = (stream) => async (dispatch) => {
     history.push('/');
 };
 
-export const editStream = (stream) => {
-    return ({
+export const editStream = (stream, streamId) => async (dispatch) => {
+    let updatedStream = await streamsApi.patch(`/streams/${streamId}`, stream)
+
+    dispatch({
         type: EDIT_STREAM,
-        payload: stream
+        payload: updatedStream.data
     });
+
+    history.push('/');
 };
 
 export const deleteStream = (id) => {

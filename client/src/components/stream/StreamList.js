@@ -10,13 +10,13 @@ class StreamList extends React.Component {
         this.props.fetchStreams();
     }
 
-    renderAdmin(userCreatedId) {
+    renderAdmin({ id, userId }) {
         
-        if (this.props.currentUser === userCreatedId) {
+        if (this.props.currentUser === userId) {
             return (
                 <div>
-                    <Link className="ui right floated button red">Delete</Link>
-                    <Link className="ui right floated button primary">Edit</Link>
+                    <Link to={`/stream/delete/${id}`} className="ui right floated button red">Delete</Link>
+                    <Link to={`/stream/edit/${id}`}className="ui right floated button primary">Edit</Link>
                 </div>
             ); 
         }
@@ -33,7 +33,7 @@ class StreamList extends React.Component {
                         <div className="header">{stream.name}</div>
                         <div className="description">{stream.description}</div>
                     </div>
-                    {this.renderAdmin(stream.userId)}
+                    {this.renderAdmin(stream)}
                 </div>
             );
         });
@@ -42,6 +42,7 @@ class StreamList extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <h1>Stream List</h1>
                 <div className="ui divided items">
                     {this.renderListStream()}
                 </div>
