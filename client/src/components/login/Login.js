@@ -61,11 +61,10 @@ class Login extends React.Component {
             </React.Fragment>
         );
     }
-
 }
 
 const mapStateToProp = (state) => ({
-    isSignedIn: state.authReducer.isSignIn
+    isSignedIn: state.auth.isSignIn
 });
 
 export default connect(mapStateToProp, { logIn, logOut })(Login);
