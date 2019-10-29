@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route , Switch } from 'react-router-dom';
+import { Router, Route , Switch } from 'react-router-dom';
 
 import Header from './Header';
 import ShowStream from './stream/ShowStream';
@@ -7,12 +7,13 @@ import StreamList from './stream/StreamList';
 import CreateStream from './stream/CreateStream';
 import EditStream from './stream/EditStream';
 import DeleteStream from './stream/DeleteStream';
+import history from '../history';
 
 class App extends React.Component {
 
     render() { 
         return (
-            <BrowserRouter>
+            <Router history={history}>
                 <div className="ui container">
                     <Header />
                     
@@ -24,7 +25,7 @@ class App extends React.Component {
                         <Route path="/stream/delete/:id" exact component={DeleteStream}></Route>
                     </Switch>
                 </div>
-            </BrowserRouter>
+            </Router>
         );
     }
 

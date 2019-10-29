@@ -32,7 +32,7 @@ class CreateStream extends React.Component {
                         <label htmlFor="streamDescription">Stream description</label>
                         <Field name="description" component={this.renderInput} type="text"/>
                     </div>
-                    <Link className="ui button right floated">Cancel</Link>
+                    <Link className="ui button right floated" to="/">Cancel</Link>
                     <button className="ui button primary right floated" type="submit">Submit</button>
                 </form>
             </div>);

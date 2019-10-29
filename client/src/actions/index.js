@@ -5,7 +5,8 @@ import { LOG_IN,
         DELETE_STREAM,
         SHOW_STREAM,
         STREAM_LIST } from './type';
-import fetchStreams from '../api/fetchStreams';
+import streamsApi from '../api/streamApi';
+import history from '../history';
 
 export const logIn = (userId) => {
     return ({
@@ -27,13 +28,24 @@ export const logOut = () => {
     });
 };
 
+export const fetchStreams = () => async (dispatch) => {
+    let response = await streamsApi.get('/streams');
+
+    dispatch({
+        type: STREAM_LIST,
+        payload: response.data
+    });
+};
+
 export const createStream = (stream) => async (dispatch) => {
-    let createdStream = await fetchStreams.post('/streams', stream);
+    let createdStream = await streamsApi.post('/streams', stream);
 
     dispatch({
         type: CREATE_STREAM,
         payload: createdStream.data
     });
+
+    history.push('/');
 };
 
 export const editStream = (stream) => {
