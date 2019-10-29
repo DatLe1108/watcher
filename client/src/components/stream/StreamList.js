@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { fetchStreams } from '../../actions';
 
@@ -7,6 +8,20 @@ class StreamList extends React.Component {
     
     componentDidMount() {
         this.props.fetchStreams();
+    }
+
+    renderAdmin(userCreatedId) {
+        
+        if (this.props.currentUser === userCreatedId) {
+            return (
+                <div>
+                    <Link className="ui right floated button red">Delete</Link>
+                    <Link className="ui right floated button primary">Edit</Link>
+                </div>
+            ); 
+        }
+
+        return null;
     }
 
     renderListStream() {
@@ -18,6 +33,7 @@ class StreamList extends React.Component {
                         <div className="header">{stream.name}</div>
                         <div className="description">{stream.description}</div>
                     </div>
+                    {this.renderAdmin(stream.userId)}
                 </div>
             );
         });
@@ -25,15 +41,23 @@ class StreamList extends React.Component {
 
     render() {
         return (
-            <div className="ui items">
-                {this.renderListStream()}
-            </div>);
+            <React.Fragment>
+                <div className="ui divided items">
+                    {this.renderListStream()}
+                </div>
+                <div className="ui divider"></div>  
+                <div>
+                    <Link className="ui button primary right floated" to="/stream/create">Create stream</Link>
+                </div>
+            </React.Fragment>
+            );
     }
 
 }
 
 const mapStateToProp = (state) => ({
-    streams: Object.values(state.streams)
+    streams: Object.values(state.streams),
+    currentUser: state.auth.userId
 });
 
 export default connect(mapStateToProp, { fetchStreams })(StreamList);
