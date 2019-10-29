@@ -31,7 +31,22 @@ class StreamForm extends React.Component {
     }
 }
 
+const validate = (formValue) => {
+    const errors = {};
+
+    if (!formValue.name) {
+        errors.title = 'Please enter stream name';
+    }
+
+    if (!formValue.description) {
+        errors.description = 'Please enter stream description';
+    }
+    console.log(errors);
+    return errors;
+};
+
 export default reduxForm({
-    form : 'streamForm'
+    form : 'streamForm',
+    validate
 })(StreamForm);
 
