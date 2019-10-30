@@ -23,7 +23,8 @@ class StreamForm extends React.Component {
     }
 
     renderInput = ({ input, meta, label}) => {
-        const className = `field ${meta.error ? 'error' : ''}`;
+        
+        const className = `field ${meta.error && meta.touched !=false ? 'error' : ''}`;
         return (
             <div className={className}>
                 <label>{label}</label>
