@@ -4,3 +4,6 @@
 /api/node_modules
 /api/db.json
 /api/package-lock.json
+
+/rtmp/package-lock.json
+/rtmp/node_modules

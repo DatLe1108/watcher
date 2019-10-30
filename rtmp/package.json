@@ -4,7 +4,7 @@
   "description": "RTMP server for watcher",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/DatLe1108/watcher/issues"
   },
-  "homepage": "https://github.com/DatLe1108/watcher#readme"
+  "homepage": "https://github.com/DatLe1108/watcher#readme",
+  "dependencies": {
+    "node-media-server": "^2.1.4"
+  }
 }
