@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { fetchStreams } from '../../actions';
+import '../../styles/test.scss';
 
 class StreamList extends React.Component {
     
