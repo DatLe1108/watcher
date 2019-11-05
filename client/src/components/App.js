@@ -2,22 +2,24 @@ import React from 'react';
 import { Router, Route , Switch } from 'react-router-dom';
 
 import Header from './Header';
+import Sidebar from './Sidebar';
 import ShowStream from './stream/ShowStream';
 import StreamList from './stream/StreamList';
 import CreateStream from './stream/CreateStream';
 import EditStream from './stream/EditStream';
 import DeleteStream from './stream/DeleteStream';
 import history from '../history';
-import style from '../styles/test.module.scss';
+
+import '../styles/main.scss';
 
 class App extends React.Component {
 
     render() { 
         return (
-            <Router history={history}>
-                <div className={`ui container ${style.test}`}>
+           /*  <Router history={history}>
+                <div className={`ui container`}>
+
                     <Header />
-                    
                     <Switch>
                         <Route path="/" exact component={StreamList}></Route>
                         <Route path="/stream/show/:id" exact component={ShowStream}></Route>
@@ -26,7 +28,15 @@ class App extends React.Component {
                         <Route path="/stream/delete/:id" exact component={DeleteStream}></Route>
                     </Switch>
                 </div>
-            </Router>
+            </Router> */
+            <div className="container">
+                <div className="sidebar">
+                    <Sidebar/>
+                </div>
+                <div className="content">
+                    Main Site
+                </div>
+            </div>   
         );
     }
 };
