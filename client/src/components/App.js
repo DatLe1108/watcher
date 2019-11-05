@@ -8,14 +8,14 @@ import CreateStream from './stream/CreateStream';
 import EditStream from './stream/EditStream';
 import DeleteStream from './stream/DeleteStream';
 import history from '../history';
-import '../styles/test.scss';
+import style from '../styles/test.module.scss';
 
 class App extends React.Component {
 
     render() { 
         return (
             <Router history={history}>
-                <div className="ui container test">
+                <div className={`ui container ${style.test}`}>
                     <Header />
                     
                     <Switch>
@@ -29,7 +29,6 @@ class App extends React.Component {
             </Router>
         );
     }
-
 };
 
 export default App;
