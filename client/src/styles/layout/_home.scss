@@ -4,11 +4,15 @@
 
     .sidebar {
         width: 26rem;
+        height: 100vh;
         background-color: $color-grey-light-1;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .content {
         flex: 1;
         background-color: $color-grey-light-2;
+        padding: 0 3rem;
     }
 }

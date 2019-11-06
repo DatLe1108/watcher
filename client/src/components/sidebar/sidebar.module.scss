@@ -1,15 +1,14 @@
 @import '../../styles/abstract/variables';
 
 .header {
-    height: $header-height;
+    margin-top: 2rem;
     text-align: center;
-    margin: auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 
     .appName {
-        font-family: 'Billabong';
+        font-family: 'Billabong', sans-serif;
         color: $color-grey-dark-1;
         font-size: 3rem;
     }
@@ -17,7 +16,7 @@
     .logo {
         margin: 0 1rem 0 2rem;
         color: transparent;
-        background-image: linear-gradient($color-orange, $color-vivid);
+        background-image: linear-gradient(to right, $color-orange, $color-vivid);
         background-clip: text;
     }
 }
@@ -32,6 +31,7 @@
     ul {
         list-style: none;
         margin: 2rem 0 2rem 2rem;
+        position: relative;
 
         li {
             
@@ -48,9 +48,8 @@
             }
         }
 
-        .regular:last-child {
+        .regular:last-of-type {
             border-bottom: 1px solid $color-grey-2;
-            position: relative;
         }
 
         .coslapseButton {
@@ -61,6 +60,7 @@
             height: 3rem;
             background-color: $color-grey-light-2;
             border-radius: 2rem;
+            line-height: 3rem;
         }
     }
 }

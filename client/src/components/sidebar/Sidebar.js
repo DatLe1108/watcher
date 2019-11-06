@@ -50,7 +50,6 @@ class Sidebar extends React.Component {
                         </li>
                         <div className={sidebarStyle.coslapseButton}>
                             <i className="angle left icon"></i>
-                            hiádasd
                         </div>
                     </ul>
                     <ul>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route , Switch } from 'react-router-dom';
 
-import Header from './Header';
+import Header from './header/Header';
 import Sidebar from './sidebar/Sidebar';
 import ShowStream from './stream/ShowStream';
 import StreamList from './stream/StreamList';
@@ -35,7 +35,7 @@ class App extends React.Component {
                         <Sidebar/>
                     </div>
                     <div className="content">
-                        Main Site
+                        <Header/>
                     </div>
                 </div>   
             </Router>
