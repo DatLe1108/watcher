@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route , Switch } from 'react-router-dom';
 
 import Header from './Header';
-import Sidebar from './Sidebar';
+import Sidebar from './sidebar/Sidebar';
 import ShowStream from './stream/ShowStream';
 import StreamList from './stream/StreamList';
 import CreateStream from './stream/CreateStream';
@@ -29,14 +29,16 @@ class App extends React.Component {
                     </Switch>
                 </div>
             </Router> */
-            <div className="container">
-                <div className="sidebar">
-                    <Sidebar/>
-                </div>
-                <div className="content">
-                    Main Site
-                </div>
-            </div>   
+            <Router history={history}>
+                <div className="container">
+                    <div className="sidebar">
+                        <Sidebar/>
+                    </div>
+                    <div className="content">
+                        Main Site
+                    </div>
+                </div>   
+            </Router>
         );
     }
 };

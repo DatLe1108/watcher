@@ -1,0 +1,63 @@
+@import '../../styles/abstract/variables';
+
+.holder {
+    width: 100%;
+    margin: 6rem 0 3rem 0;
+
+    .image {
+        width: 11rem;
+        height: 11rem;
+        background-image: url('https://www.midlandsderm.com/wp-content/uploads/2019/04/Rachel-R.-Person-760x760.jpg');
+        background-size: cover;
+        border-radius: 10rem;
+        border: 2px solid $color-vivid;
+        padding: 5px;
+        margin: auto;
+        background-clip: content-box;
+    }
+}
+
+.name {
+    margin: 3rem 0;
+    text-align: center;
+
+    .fullName {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .id {
+        font-size: 1.3rem;
+        color: $color-grey-1;
+        margin: .5rem 0;
+    }
+}
+
+.statistic {
+    
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    .wrapper {
+        text-align: center;
+        flex-grow: 1;
+
+        .number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            color: $color-grey-1;
+        }
+    }
+
+    .wrapper:not(:last-child) {
+        border-right: $color-grey-2 1px solid;
+    }
+
+}

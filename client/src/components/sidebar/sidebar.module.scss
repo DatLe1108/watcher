@@ -1,0 +1,66 @@
+@import '../../styles/abstract/variables';
+
+.header {
+    height: $header-height;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    .appName {
+        font-family: 'Billabong';
+        color: $color-grey-dark-1;
+        font-size: 3rem;
+    }
+
+    .logo {
+        margin: 0 1rem 0 2rem;
+        color: transparent;
+        background-image: linear-gradient($color-orange, $color-vivid);
+        background-clip: text;
+    }
+}
+
+.profile {
+    
+}
+
+.menu {
+ 
+
+    ul {
+        list-style: none;
+        margin: 2rem 0 2rem 2rem;
+
+        li {
+            
+            padding: 2rem;
+            cursor: pointer;
+
+            &.active {
+                color: $color-vivid;
+                border-right: 1.4px solid $color-vivid;
+            }
+
+            i {
+                margin-right: 2rem;
+            }
+        }
+
+        .regular:last-child {
+            border-bottom: 1px solid $color-grey-2;
+            position: relative;
+        }
+
+        .coslapseButton {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1rem;
+            width: 3rem;
+            height: 3rem;
+            background-color: $color-grey-light-2;
+            border-radius: 2rem;
+        }
+    }
+}
