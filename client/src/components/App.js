@@ -10,6 +10,7 @@ import EditStream from './stream/EditStream';
 import DeleteStream from './stream/DeleteStream';
 import history from '../history';
 import Story from './story/Story';
+import Feed from './feed/Feed';
 
 import '../styles/main.scss';
 
@@ -38,6 +39,7 @@ class App extends React.Component {
                     <div className="content">
                         <Header/>
                         <Story/>
+                        <Feed/>
                     </div>
                 </div>   
             </Router>

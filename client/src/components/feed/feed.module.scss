@@ -1,0 +1,28 @@
+.feedHolder {
+
+    margin: 1rem 2rem;
+
+    .actionHolder {
+
+        display: flex;
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-right: auto;
+        }
+
+        .action {
+            font-weight: bold;
+            display: flex;
+            
+            .latest, .popular {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .feeds {
+        margin-top: 3rem;
+    }
+}
