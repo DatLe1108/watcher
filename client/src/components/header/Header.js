@@ -9,7 +9,7 @@ class Header extends React.Component {
         return (
             <div className={headerStyle.header}>
                 <div className={headerStyle.searchBar}>
-                    <i class="search icon"></i>
+                    <i className="search icon"></i>
                     <input placeholder="Search"/>
                 </div>
                 <div className={headerStyle.ctaButton}>

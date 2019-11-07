@@ -3,18 +3,6 @@
 .holder {
     width: 100%;
     margin: 5.5rem 0 3rem 0;
-
-    .image {
-        width: 11rem;
-        height: 11rem;
-        background-image: url('https://www.midlandsderm.com/wp-content/uploads/2019/04/Rachel-R.-Person-760x760.jpg');
-        background-size: cover;
-        border-radius: 10rem;
-        border: 2px solid $color-vivid;
-        padding: 5px;
-        margin: auto;
-        background-clip: content-box;
-    }
 }
 
 .name {

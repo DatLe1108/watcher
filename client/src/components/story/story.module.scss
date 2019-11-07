@@ -1,0 +1,43 @@
+@import '../../styles/abstract/variables';
+
+.storyHolder {
+
+    margin: 6rem 2rem;
+
+    .actionHolder {
+
+        display: flex;
+        align-items: baseline;
+
+        .title {
+            font-weight: bold;
+            font-size: 3rem;
+            margin-right: auto;
+        }
+
+        .action {
+            font-weight: bold;
+            vertical-align: center;
+
+            i {
+                margin-right: 1rem;
+                background-image: linear-gradient(to right, $color-jasmine, $color-orange, $color-vivid, $color-iris);
+                background-clip: text;
+                color: transparent;
+            }
+        }
+
+    }
+
+    .stories {
+
+        margin-top: 3rem;
+        display: flex;
+
+        .story {
+
+            margin: 0 2rem 0 0;
+
+        }
+    }
+}

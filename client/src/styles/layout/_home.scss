@@ -4,6 +4,7 @@
 
     .sidebar {
         width: 26rem;
+        min-width: 20rem;
         height: 100vh;
         background-color: $color-grey-light-1;
         overflow-x: hidden;
@@ -14,5 +15,8 @@
         flex: 1;
         background-color: $color-grey-light-2;
         padding: 0 3rem;
+        max-width: calc(100vw - 26rem);
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
     }
 }

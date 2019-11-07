@@ -1,0 +1,58 @@
+.user-avatar {
+    width: 12rem;
+    height: 12rem;
+    background-size: cover;
+    border-radius: 10rem;
+    background-image: linear-gradient(to bottom left, $color-jasmine, $color-vivid);
+    margin: auto;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.add-new {
+        background-image: none;
+        border: 3px solid $color-grey-2;
+    }
+
+    .decorator {
+        position: absolute;
+        z-index: 2;
+        width: 11.5rem;
+        height: 11.5rem;
+        border-radius: 10rem;
+        background-color: $color-grey-light-2;
+
+    }
+
+    img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 5rem;
+        position: absolute;
+        z-index: 3;
+        object-fit: cover;
+    }
+
+    .add-new {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 5rem;
+        position: absolute;
+        z-index: 4;
+        background-color: $color-iris;
+        opacity: .7;
+
+        i {
+            color: $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            opacity: .7;
+        }
+    }
+}

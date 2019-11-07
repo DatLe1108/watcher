@@ -1,5 +1,7 @@
 import React from 'react';
 
+import UserAvatar from '../sharedComponent/UserAvatar';
+
 import profileStyle from './profile.module.scss';
 
 class UserProfile extends React.Component {
@@ -8,7 +10,7 @@ class UserProfile extends React.Component {
         return (
             <>
                 <div className={profileStyle.holder}>
-                    <div className={profileStyle.image}></div>
+                    <UserAvatar imageUrl="https://www.midlandsderm.com/wp-content/uploads/2019/04/Rachel-R.-Person-760x760.jpg"/>
                 </div>
                 <div className={profileStyle.name}>
                     <div className={profileStyle.fullName}>Keyly Clarson</div>
