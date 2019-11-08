@@ -3,23 +3,28 @@ import React from 'react';
 import UserAvatar from './UserAvatar';
 
 const FeedCard = (props) => {
+
+    const isRenderSmallSize = props.even ? 'even' : '';
+    const isLiked = props.liked ? 'liked' : '';
+    const isCommented = props.commented ? 'commented' : '';
+
     return (
-        <div className="card-holder">
-            <div className="card-image-holder">
-                <img src="https://i.ytimg.com/vi/jFPBLyUEZUk/maxresdefault.jpg"/>
+        <div className={`card-holder ${isRenderSmallSize}`}>
+            <div className={`card-image-holder ${isRenderSmallSize}`}>
+                <img src={props.imageUrl}/>
             </div>
-            <div className="info-holder">
+            <div className={`info-holder ${isRenderSmallSize}`}>
                 <div className="user-info">
                     <div className="user-image"></div>
-                    Suliana.Ken
+                    {props.name}
                 </div>
-                <div className="like">
-                    <i class="heart outline icon"></i>
-                    112
+                <div className={`like ${isLiked}`}>
+                    <i class={`heart icon ${isLiked ? '' : 'outline'}`}></i>
+                    {props.like}
                 </div>
                 <div className="comment">
-                    <i class="comment outline icon"></i>
-                    30
+                    <i class={`comment icon ${isCommented ? '' : 'outline'}`}></i>
+                    {props.comment}
                 </div>
             </div>
         </div>

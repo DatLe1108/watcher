@@ -20,7 +20,7 @@ class Header extends React.Component {
                 </div>
                 <div className={headerStyle.ctaButton}>
                     <Link to="/" className={headerStyle.addStreamButton}>
-                        <i class="plus icon"></i>
+                        <i className="plus icon"></i>
                         Add new Stream
                     </Link>
                 </div>
